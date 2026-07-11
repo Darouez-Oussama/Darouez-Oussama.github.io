@@ -24,7 +24,7 @@ const PROJECTS = [
     ],
     tags: ["Wi-Fi", "HTTPS", "OTA", "ESP-IDF", "FreeRTOS"],
     illustration: "/public/illustrations/smart-plug.png",
-    photo: "/public/projects/smart-plug.jpg",
+    photo: "/public/illustrations/smart-plug.png",
   },
   {
     title: "Bionic Arm",
@@ -72,7 +72,7 @@ const PROJECTS = [
     ],
     tags: ["STM32", "PIC", "ATmega", "SPI", "I2C", "PWM"],
     illustration: "/public/illustrations/bare-metal.png",
-    photo: "/public/projects/bare-metal.jpg",
+    photo: "/public/projects/stm32.jpg",
   },
   {
     title: "FPGA-Based UART & GCD Calculator",
@@ -110,6 +110,26 @@ const PROJECTS = [
     tags: ["Arduino", "PIC18F2550", "nRF24L01", "EasyEDA"],
     illustration: "/public/illustrations/fpga.png",
     photo: "/public/projects/transmitter.jpeg",
+  },
+  {
+    title: "Drone",
+    meta: "Aerobotix Project · 2021",
+    points: [
+      "Introduction to flight controllers PID and Brushless motors.",
+    ],
+    tags: ["Flight Controller", "PID Control"],
+    illustration: "/public/illustrations/fpga.png",
+    photo: "/public/projects/drone.jpg",
+  },
+  {
+    title: "Big Led Matrix",
+    meta: "Aerobotix Project · 2023",
+    points: [
+      "Used Window Glass Cubes To make a big led matrix.",
+    ],
+    tags: ["ESP32", "Led Matrix"],
+    illustration: "/public/illustrations/fpga.png",
+    photo: "/public/projects/light.jpeg",
   },
 ];
 
