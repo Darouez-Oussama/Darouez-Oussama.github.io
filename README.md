@@ -1,52 +1,45 @@
 # Oussama Darouez — Portfolio
 
-A fast, static personal portfolio (plain HTML / CSS / JS — no build step). Designed to be hosted for free on **GitHub Pages**.
+An interactive, mouse-driven portfolio (inspired by robbowen.digital).
+It's a **plain static site** — no build step — so it works directly on GitHub Pages.
 
-## Structure
+## Files
 
-```
-index.html                 # All page content
-styles.css                 # Styles + theme tokens
-script.js                  # Mobile menu + footer year
-assets/
-  favicon.svg
-  oussama-darouez-cv.pdf   # Replace with your real CV
-public/illustrations/      # Project line-art images
-```
+| File | What it is |
+|------|------------|
+| `index.html` | Page structure |
+| `styles.css` | All styling |
+| `script.js` | Interactions (custom cursor, avatar tilt, project hover-reveal, scroll animations) |
+| `public/avatar.png` | The illustrated avatar |
+| `public/projects/` | Your project screenshots |
 
-## Preview locally
+## Why your old site only showed the README
 
-Any static server works, e.g.:
-
-```bash
-npx serve .
-```
-
-Then open the printed URL.
+GitHub Pages serves `index.html` as the homepage. Your repo previously contained
+**only** `README.md`, so GitHub fell back to rendering that. Now that an
+`index.html` exists at the repo root, your real site will show up.
 
 ## Deploy to GitHub Pages
 
-1. Create a repo (e.g. `Darouez-Oussama.github.io` for a user site, or any name for a project site).
-2. Push these files to the `main` branch:
+1. Copy every file in this project into your `Darouez-Oussama.github.io` repo,
+   keeping the same folder structure (`index.html` must be at the root).
+2. Commit and push to the `main` branch:
    ```bash
-   git init
    git add .
-   git commit -m "Portfolio"
-   git branch -M main
-   git remote add origin https://github.com/Darouez-Oussama/<repo>.git
-   git push -u origin main
+   git commit -m "Add interactive portfolio"
+   git push origin main
    ```
-3. In the repo, go to **Settings → Pages**.
-4. Under **Build and deployment → Source**, choose **Deploy from a branch**.
-5. Select branch **main** and folder **/ (root)**, then **Save**.
-6. Your site goes live at `https://Darouez-Oussama.github.io/<repo>/` in a minute or two.
+3. In your repo: **Settings → Pages → Build and deployment**
+   - Source: **Deploy from a branch**
+   - Branch: **main** / **/ (root)**
+4. Wait ~1 minute, then visit **https://darouez-oussama.github.io**
 
-> The included `.nojekyll` file tells GitHub Pages to serve all folders as-is.
+## Customize
 
-## Update your content
-
-- **Text / sections:** edit `index.html`.
-- **CV:** replace `assets/oussama-darouez-cv.pdf` with your real file (keep the same name, or update the link in `index.html`).
-- **Colors / fonts:** tweak the `:root` tokens at the top of `styles.css`.
-- **Project images:** drop new PNGs into `public/illustrations/` and update the `<img src>` in `index.html`.
-# Darouez-Oussama.github.io
+- **Projects:** edit the `PROJECTS` array at the top of `script.js`. Drop your
+  screenshots into `public/projects/` and point `photo` at them. If an image is
+  missing, a placeholder tells you where to add it.
+- **Skills:** edit the `SKILLS` array in `script.js`.
+- **Text / links:** edit `index.html` (email in the Contact section, GitHub link, etc.).
+- **Avatar:** replace `public/avatar.png` with your own illustration.
+- **Colors:** tweak the CSS variables at the top of `styles.css`.
