@@ -52,7 +52,7 @@ const PROJECTS = [
   },
   {
     title: "Eurobot Robots",
-    meta: "Robotics Competition · 2023",
+    meta: "International Robotics Competition · 2023",
     points: [
       "Autonomous competition robots running on STM32.",
       "Closed-loop PID motion control with odometry.",
@@ -64,7 +64,7 @@ const PROJECTS = [
   },
   {
     title: "Bare Metal Development",
-    meta: "Driver Development",
+    meta: "INSAT Embedded Systems Course & Projects · 2023",
     points: [
       "Low-level bare-metal drivers for STM32, PIC and ATmega: GPIO, ADC, Timer, EXTI.",
       "Full drivers for LIS3DSH (SPI) and MMA7660 (I2C) accelerometers.",
@@ -76,7 +76,7 @@ const PROJECTS = [
   },
   {
     title: "FPGA-Based UART & GCD Calculator",
-    meta: "Jan 2025 – Apr 2025",
+    meta: "INSAT Digital Systems Course · 2024",
     points: [
       "Single-purpose processors for UART communication and GCD calculation on FPGA.",
       "Control logic and datapath built with finite state machines, optimized via Karnaugh maps.",
@@ -85,6 +85,31 @@ const PROJECTS = [
     tags: ["VHDL", "FPGA", "Quartus", "FSM", "Cyclone IV"],
     illustration: "/public/illustrations/fpga.png",
     photo: "/public/projects/fpga.jpg",
+  },
+  {
+    title: "Automated Production Line Control System",
+    meta: "INSAT Industrial Automation Course · 2024",
+    points: [
+      "Single-Designed a complete automation workflow with sorting, heating, machining, and quality control stages.",
+      "Built a Factory I/O simulation for system testing and functional validation.",
+      "Programmed process control using Ladder Logic (LD) in TIA Portal V17.",
+      "Created an HMI interface for real-time process monitoring and operator interaction.",
+    ],
+    tags: ["S7-1500 PLCs", "TIA PORTAL", "Ladder Logic", "Grafcet", "Factory I/O"],
+    illustration: "/public/illustrations/fpga.png",
+    photo: "/public/projects/industry.jpg",
+  },
+  {
+    title: "Arduino-Based RC Transmitter",
+    meta: "Aerobotix Project · 2022",
+    points: [
+      "Coded nRF24L01 module for reliable wireless transmission of controller data to an RC car.",
+      "Programmed PIC18F2550 to interface a 3x4 matrix keypad for USB and UART-based control.",
+      "Designed and laid out the remote controller PCB using EasyEDA.",
+    ],
+    tags: ["Arduino", "PIC18F2550", "nRF24L01", "EasyEDA"],
+    illustration: "/public/illustrations/fpga.png",
+    photo: "/public/projects/nrf.jpg",
   },
 ];
 
