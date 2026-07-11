@@ -1,0 +1,74 @@
+
+
+Oussama Darouez
+Embedded Systems Engineer
+darouez.oussama@gmail.com+33 06 16 17 50 57Belfort, FranceLinkedInGitHub
+Summary
+Embedded Systems Engineer with hands-on experience designing firmware, real-time systems, and embedded networking protocols
+industrial and IoT projects.  Skilled in bare-metal and RTOS-based development on various microcontrollers, driver design and
+CI/CD automation for production-grade firmware.
+Education
+National Institute of Applied Science and Technology (INSAT)
+Engineering Degree, Industrial Computing and Automation
+Sept 2021 – Sept 2026
+Experience
+Embedded Systems Engineering Intern
+Nicolaudie Group – LightingSoft AG
+Meroux, France
+March 2026 – Present
+•  Developed a scalable Modbus TCP server for STM32 and NXP LPC, supporting multiple concurrent clients.
+•  Integrated Modbus triggers into the show engine for real-time, dynamic scene parameter control.
+•  Built a robust C++ Modbus client with automated stress tests validating protocol reliability.
+•  Authored comprehensive QTest suites, strengthening regression coverage and system reliability.
+•  Migrated Jenkins CI/CD pipelines from Qt5 to Qt6, resolving automated test-build issues.
+Technologies:  C· C++· Qt· Qtest· STM32· NXP LPC· Wireshark· Jenkins· SEGGER Ozone· FreeROS· Lizard Analysis
+Embedded Systems Engineer
+MareCustos
+Tunis, Tunisia
+June 2024 – Sept 2025
+•  Built a dual-slot OTA firmware update system over Ethernet/USB with automatic fallback recovery.
+•  Prototyped reusable peripheral drivers for Timers, Ethernet, Flash, ADC, and PCNT modules.
+•  Designed custom micro-ROS transport layers for STM32, enabling reliable inter-device communication.
+•  Automated firmware build and testing workflows using CI/CD pipelines with GitHub Actions.
+•  Designed and debugged a custom bootloader with reset-cause handling for production robustness.
+Technologies:  C· C++· STM32· ESP32· micro-ROS· Unity C· GitHub Actions
+Mechatronics Engineer
+Orange Tunisie
+Tunis, Tunisia
+May 2024 – July 2024
+•  Optimized FreeRTOS task scheduling on ESP32 for reliable multitasking and efficient resource use.
+•  Restructured the UART/Ymodem interface for reliable command reception and task triggering.
+•  Established a robust test bench to streamline robot functionality validation.
+Technologies:  ESP32· FreeRTOS· UART· Ymodem· Bash
+Robotics Instructor
+Discovery Club Junior
+Manouba, Tunisia
+May 2023 – May 2025
+•  Delivered hands-on PCB design training with KiCad, from schematic to prototype.
+•  Guided students through digital logic design and ATmega328P register-level programming.
+•  Assisted students with mechanical design and robot mechanics brainstorming using SolidWorks.
+Technologies:  KiCad· SolidWorks· ATmega328P· Robotics
+Projects
+OTA-Enabled Smart Home Devices
+08/2025 – 09/2025
+•  Prototyped IoT devices with HTTPS OTA updates and SmartConfig Wi-Fi provisioning.
+•  Implemented non-volatile storage management for reliable device parameter retrieval.
+•  Automated firmware build, flash, and deployment using Bash and GitHub Actions for ESP-IDF.
+Technologies:  ESP-IDF· Wi-Fi· GitHub Actions· Bash
+Bare-Metal Drivers01/2024 – 05/2024
+•  Developed low-level bare-metal drivers for STM32, PIC and Atmega:  GPIO, ADC, Timer, and EXTI peripherals.
+•  Implemented full drivers for LIS3DSH (SPI) and MMA7660 (I2C) accelerometers.
+•  Built a configurable brushless motor control system using PWM and ADC feedback.
+Technologies:  STM32F4· PIC16F· Atmega328P· SPI· I2C
+Autonomous Robots, Eurobot09/2022 – 05/2023
+•  Engineered servo drivers and GPIO HATs with KiCad, validated through real-world testing.
+•  Implemented PID motor control and odometry on STM32 for precise robot movement.
+•  Set up ROS1 communication between Raspberry Pi and STM32 across multi-board systems.
+Technologies:  STM32· ROS1· KiCad· 3D Printing
+Skills
+Microcontrollers:  STM32, ESP32, PIC, ATmega328P, Raspberry Pi, NXP LPC.
+Protocols:  Ethernet, TCP/IP, UART, SPI, I2C, USB-CDC, CAN, Modbus, Wi-Fi.
+RTOS & Tools:  FreeRTOS, Qt, SEGGER Ozone, Wireshark, KiCad, SolidWorks.
+Languages & CI/CD: C, C++, Python, Java, Bash, Git, GitHub Actions, Jenkins, Docker.
+Languages
+English:  Proficient, French:  Proficient, Arabic:  Native.
