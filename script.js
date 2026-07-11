@@ -109,7 +109,7 @@ const PROJECTS = [
     ],
     tags: ["Arduino", "PIC18F2550", "nRF24L01", "EasyEDA"],
     illustration: "/public/illustrations/fpga.png",
-    photo: "/public/projects/transmitter.jpg",
+    photo: "/public/projects/transmitter.jpeg",
   },
 ];
 
