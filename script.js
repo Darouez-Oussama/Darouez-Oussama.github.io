@@ -72,7 +72,7 @@ const PROJECTS = [
     ],
     tags: ["STM32", "PIC", "ATmega", "SPI", "I2C", "PWM"],
     illustration: "/public/illustrations/bare-metal.png",
-    photo: "/public/projects/stm32.jpg",
+    photo: "/public/projects/stm.jpg",
   },
   {
     title: "FPGA-Based UART & GCD Calculator",
