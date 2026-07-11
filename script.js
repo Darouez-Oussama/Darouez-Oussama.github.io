@@ -96,7 +96,7 @@ const PROJECTS = [
       "Created an HMI interface for real-time process monitoring and operator interaction.",
     ],
     tags: ["S7-1500 PLCs", "TIA PORTAL", "Ladder Logic", "Grafcet", "Factory I/O"],
-    illustration: "/public/illustrations/fpga.png",
+    illustration: "/public/illustrations/industrial.jpeg",
     photo: "/public/projects/industrial-line.jpg",
   },
   {
@@ -108,7 +108,7 @@ const PROJECTS = [
       "Designed and laid out the remote controller PCB using EasyEDA.",
     ],
     tags: ["Arduino", "PIC18F2550", "nRF24L01", "EasyEDA"],
-    illustration: "/public/illustrations/fpga.png",
+    illustration: "/public/illustrations/trans.jpeg",
     photo: "/public/projects/transmitter.jpeg",
   },
   {
@@ -118,7 +118,7 @@ const PROJECTS = [
       "Introduction to flight controllers PID and Brushless motors.",
     ],
     tags: ["Flight Controller", "PID Control"],
-    illustration: "/public/illustrations/fpga.png",
+    illustration: "/public/illustrations/drone.jpeg",
     photo: "/public/projects/drone.jpg",
   },
   {
@@ -128,7 +128,7 @@ const PROJECTS = [
       "Used Window Glass Cubes To make a big led matrix.",
     ],
     tags: ["ESP32", "Led Matrix"],
-    illustration: "/public/illustrations/fpga.png",
+    illustration: "/public/illustrations/led.jpeg",
     photo: "/public/projects/light.jpeg",
   },
 ];
