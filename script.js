@@ -36,7 +36,7 @@ const PROJECTS = [
     ],
     tags: ["ESP32", "STM32", "EMG", "SOLID"],
     illustration: "/public/illustrations/bionic-arm.png",
-    photo: "/public/projects/bionic-arm.jpg",
+    photo: "/public/projects/bionic-hand.jpg",
   },
   {
     title: "Inverted Pendulum",
@@ -48,7 +48,7 @@ const PROJECTS = [
     ],
     tags: ["MATLAB", "LabVIEW", "Control Theory", "PID"],
     illustration: "/public/illustrations/pendulum.png",
-    photo: "/public/projects/pendulum.jpg",
+    photo: "/public/projects/robotic-arm.jpg",
   },
   {
     title: "Eurobot Robots",
@@ -60,7 +60,7 @@ const PROJECTS = [
     ],
     tags: ["STM32", "PID Control", "ROS", "KiCad"],
     illustration: "/public/illustrations/robot.png",
-    photo: "/public/projects/eurobot.jpg",
+    photo: "/public/projects/eurobot-setup.jpg",
   },
   {
     title: "Bare Metal Development",
@@ -97,7 +97,7 @@ const PROJECTS = [
     ],
     tags: ["S7-1500 PLCs", "TIA PORTAL", "Ladder Logic", "Grafcet", "Factory I/O"],
     illustration: "/public/illustrations/fpga.png",
-    photo: "/public/projects/industry.jpg",
+    photo: "/public/projects/industrial-line.jpg",
   },
   {
     title: "Arduino-Based RC Transmitter",
@@ -109,7 +109,7 @@ const PROJECTS = [
     ],
     tags: ["Arduino", "PIC18F2550", "nRF24L01", "EasyEDA"],
     illustration: "/public/illustrations/fpga.png",
-    photo: "/public/projects/nrf.jpg",
+    photo: "/public/projects/transmitter.jpg",
   },
 ];
 
