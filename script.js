@@ -131,6 +131,26 @@ const PROJECTS = [
     illustration: "/public/illustrations/led.jpeg",
     photo: "/public/projects/light.jpeg",
   },
+  {
+    title: "Djekstra Algorithm",
+    meta: "Personal Project · 2023",
+    points: [
+      "Implemented Dijkstra's algorithm for shortest path finding in a graph.",
+    ],
+    tags: ["Dijkstra", "C++", "Graph Theory"],
+    illustration: "/public/illustrations/graph.png",
+    photo: "/public/illustrations/graph.png",
+  },
+  {
+    title: "Image Processing Basics",
+    meta: "Insat Embedded Vision Course · 2024",
+    points: [
+      "Implemented basic image processing techniques using Python and OpenCV.",
+    ],
+    tags: ["Image Processing", "Python", "OpenCV"],
+    illustration: "/public/illustrations/img_processing.png",
+    photo: "/public/illustrations/img_processing.png",
+  },
 ];
 
 /* ---------- Render projects ---------- */
