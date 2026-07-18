@@ -101,6 +101,39 @@ body {
 }
 .nav-cta:hover { background: var(--purple); color: var(--white); }
 
+/* ---------- Language toggle button ---------- */
+.lang-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 2px solid var(--purple);
+  background: transparent;
+  color: var(--purple);
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  font-family: inherit;
+  flex-shrink: 0;
+  transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+.lang-btn:hover {
+  background: var(--purple);
+  color: var(--white);
+  transform: scale(1.08);
+}
+.lang-btn.switching {
+  animation: langPop .25s ease;
+}
+@keyframes langPop {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(0.82) rotate(-10deg); }
+  100% { transform: scale(1); }
+}
+
 /* ---------- Layout ---------- */
 main { position: relative; z-index: 1; }
 .section {
@@ -187,7 +220,6 @@ main { position: relative; z-index: 1; }
 }
 .avatar-body {
   z-index: 1;
-  /* same pivot as the head so the shoulders track the cut line together */
   transform-origin: 50% 86%;
   transition: transform .12s ease-out;
   will-change: transform;
@@ -195,7 +227,6 @@ main { position: relative; z-index: 1; }
 }
 .avatar-head {
   z-index: 2;
-  /* pivot the head deep in the solid shirt so the neck never detaches */
   transform-origin: 50% 86%;
   transition: transform .12s ease-out;
   will-change: transform;
@@ -250,7 +281,6 @@ main { position: relative; z-index: 1; }
 }
 .project-card:focus-visible { outline: 3px solid var(--purple); outline-offset: 4px; border-radius: var(--radius); }
 
-/* the flipping container (book page turn) */
 .project-inner {
   position: relative;
   width: 100%; height: 100%;
@@ -276,14 +306,11 @@ main { position: relative; z-index: 1; }
 .project-card:hover .project-back { box-shadow: 0 30px 60px rgba(30,27,75,0.18); }
 .project-back { transform: rotateY(180deg); }
 
-/* Belt-and-suspenders: hide the face that is turned away (toggles at mid-flip)
-   so no mirrored text ever bleeds through — the flipped side is purely the photo. */
 .project-front { visibility: visible; transition: visibility 0s; }
-.project-back  { visibility: hidden;  transition: visibility 0s linear .4s; }
+.project-back { visibility: hidden; transition: visibility 0s linear .4s; }
 .project-card.flipped .project-front { visibility: hidden; transition: visibility 0s linear .4s; }
-.project-card.flipped .project-back  { visibility: visible; transition: visibility 0s; }
+.project-card.flipped .project-back { visibility: visible; transition: visibility 0s; }
 
-/* the illustration, revealed on hover of the front */
 .project-illustration {
   position: absolute;
   inset: 0;
@@ -295,7 +322,6 @@ main { position: relative; z-index: 1; }
 }
 .project-card:hover .project-illustration { transform: scale(1); }
 
-/* the cover with title + bullet points (hidden on hover) */
 .project-cover {
   position: absolute;
   inset: 0;
@@ -340,14 +366,12 @@ main { position: relative; z-index: 1; }
 }
 .project-card:hover .peek { background: var(--purple); color: var(--white); border-color: var(--purple); transform: translateY(-2px); }
 
-/* the actual photo on the flipped side */
 .project-photo {
   position: absolute;
   inset: 0;
   width: 100%; height: 100%;
   object-fit: cover;
 }
-/* placeholder shown when no photo dropped in yet */
 .photo-fallback {
   position: absolute; inset: 0;
   display: flex; align-items: center; justify-content: center;
@@ -456,9 +480,7 @@ main { position: relative; z-index: 1; }
   background: var(--blue-deep);
   transition: background .2s ease, transform .2s ease;
 }
-/* markers turn purple when hovering anywhere on the experience entry */
 .timeline-item:hover .timeline-points li::before { background: var(--purple); }
-/* the hovered bullet itself gets the strongest highlight */
 .timeline-points li:hover { color: var(--purple); transform: translateX(3px); }
 .timeline-points li:hover::before { background: var(--purple); transform: rotate(45deg) scale(1.3); }
 
@@ -469,9 +491,6 @@ main { position: relative; z-index: 1; }
   border: 1.5px solid var(--purple); color: var(--purple);
   padding: 3px 10px; border-radius: 999px; background: var(--white);
 }
-
-/* project meta line inside cover */
-.project-meta { color: var(--ink-soft); font-weight: 600; font-size: 13px; margin-top: 6px; }
 
 /* ---------- Achievements ---------- */
 .achievement-list { list-style: none; margin-top: 56px; display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
@@ -509,7 +528,6 @@ main { position: relative; z-index: 1; }
 /* ---------- Contact extras ---------- */
 .contact-lead { max-width: 620px; margin: 0 auto 44px; color: var(--ink-soft); font-size: 18px; }
 
-/* horizontal interactive icon row */
 .contact-social {
   list-style: none;
   display: flex;
@@ -549,7 +567,6 @@ main { position: relative; z-index: 1; }
   transition: color .28s ease;
 }
 .social-btn:hover .social-label { color: var(--purple); }
-/* confirmation state after copying email / phone */
 .social-btn.copied svg {
   background: var(--purple);
   color: var(--white);

@@ -1,90 +1,95 @@
 <!DOCTYPE html>
-<html lang="en" class="bg-background">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Oussama Darouez — Embedded Systems Engineer</title>
-  <meta name="description" content="Oussama Darouez — Embedded Systems Engineer & Firmware Developer specializing in STM32, ESP32, FreeRTOS, IoT and real-time systems." />
-  <meta name="theme-color" content="#f2f8fb" />
-  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/styles.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,700;0,900;1,400&family=Inter:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- Interactive cursor -->
-  <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
-  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
 
-  <!-- Mouse-follow glow -->
-  <div class="glow" id="glow" aria-hidden="true"></div>
+  <!-- Custom cursor -->
+  <div class="cursor-dot"  id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+  <div class="glow"        id="glow"></div>
 
-  <header class="nav">
-    <a href="#top" class="brand" aria-label="Home">
+  <!-- ===== NAV ===== -->
+  <nav class="nav">
+    <a href="#" class="brand">
       <span class="brand-mark"></span>
       <span class="brand-name">OUSSAMA</span>
     </a>
-    <nav class="nav-links" aria-label="Primary">
-      <a href="#about">About</a>
-      <a href="#experience">Experience</a>
-      <a href="#work">Projects</a>
-      <a href="#achievements">Achievements</a>
-      <a href="#certificates">Certificates</a>
-      <a href="#contact" class="nav-cta">Hire me</a>
-    </nav>
-  </header>
+    <div class="nav-links">
+      <a href="#about"        data-i18n="nav.about">About</a>
+      <a href="#experience"   data-i18n="nav.experience">Experience</a>
+      <a href="#projects"     data-i18n="nav.projects">Projects</a>
+      <a href="#achievements" data-i18n="nav.achievements">Achievements</a>
+      <a href="#certificates" data-i18n="nav.certificates">Certificates</a>
+      <a href="#contact" class="nav-cta" data-i18n="nav.hire">Hire me</a>
+      <!-- Language toggle -->
+      <button id="langToggle" class="lang-btn" aria-label="Switch language">
+        <span id="langLabel">FR</span>
+      </button>
+    </div>
+  </nav>
 
-  <main id="top">
-    <!-- HERO -->
-    <section class="hero" id="hero">
+  <main>
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" aria-label="Introduction">
       <div class="hero-text">
-        <span class="hero-eyebrow reveal">Embedded Systems Engineer · Firmware Developer</span>
-        <h1 class="hero-title">
-          <span class="line reveal">Hi, my</span>
-          <span class="line reveal">name is <strong>Oussama<span class="dot">.</span></strong></span>
+        <span class="hero-eyebrow reveal" data-i18n="hero.eyebrow">Embedded Systems Engineer · Firmware Developer</span>
+        <h1 class="hero-title reveal">
+          <span class="line">Hi, my</span>
+          <span class="line">name is <strong>Oussama<span class="dot">.</span></strong></span>
         </h1>
-        <p class="hero-sub reveal">
-          I compile abstract logic into physical reality, engineering robust <strong>Firmware and IoT</strong> systems from bare metal to the cloud.
+        <p class="hero-sub reveal" data-i18n="hero.sub">
+          I compile abstract logic into physical reality, engineering robust Firmware and IoT systems from bare metal to the cloud.
         </p>
-        <div class="hero-actions reveal">
-          <a href="#work" class="btn">View my work</a>
-          <a href="/assets/oussama-darouez-cv.pdf" class="btn btn-ghost" download>Download CV</a>
+        <div class="hero-actions">
+          <a href="#projects" class="btn reveal"       data-i18n="hero.cta1">View my work</a>
+          <a href="assets/oussama-darouez-cv.pdf" class="btn btn-ghost reveal" download data-i18n="hero.cta2">Download CV</a>
         </div>
       </div>
 
       <div class="hero-avatar" id="avatarStage">
         <div class="avatar-tilt" id="avatarTilt">
-          <img src="/public/avatar-body.png" alt="" aria-hidden="true" class="avatar-layer avatar-body" id="avatarBody" />
-          <img src="/public/avatar-head.png" alt="Illustrated portrait of Oussama Darouez" class="avatar-layer avatar-head" id="avatarHead" />
+          <img src="public/avatar-body.png" alt="" class="avatar-layer avatar-body" id="avatarBody" />
+          <img src="public/avatar-head.png" alt="Oussama Darouez" class="avatar-layer avatar-head" id="avatarHead" />
         </div>
       </div>
 
-      <div class="scroll-hint" aria-hidden="true">SCROLL</div>
+      <p class="scroll-hint" aria-hidden="true">SCROLL</p>
     </section>
 
-    <!-- ABOUT -->
-    <section class="section about" id="about">
+    <!-- ===== ABOUT ===== -->
+    <section class="section reveal" id="about" aria-labelledby="about-heading">
       <div class="about-grid">
-  <div class="about-copy">
-          <span class="eyebrow reveal">About</span>
-          <h2 class="section-title reveal">A bit about me<span class="dot">.</span></h2>
-          <p class="reveal">
-            I&apos;m an Embedded Systems Engineer graduating this September from the National Institute of Applied Science and Technology (INSAT)
+        <div class="about-copy">
+          <span class="eyebrow" data-i18n="about.eyebrow">About</span>
+          <h2 class="section-title" id="about-heading" data-i18n="about.title">A bit about me.</h2>
+          <p data-i18n="about.p1">
+            I'm an Embedded Systems Engineer graduating this September from the National Institute of Applied Science and Technology (INSAT)
             with a strong foundation in electronics, programming, and real-time systems.
           </p>
-          <p class="reveal">
+          <p data-i18n="about.p2">
             With hands-on experience in firmware development, real-time systems, and IoT, I
             specialize in dependable embedded solutions using STM32, ESP32, FreeRTOS and
             protocols such as UART, SPI, I2C, CAN, and Ethernet.
           </p>
-          <p class="reveal">
+          <p data-i18n="about.p3">
             I am wrapping up my internship this August as an Embedded Systems Engineering Intern at the
-            <strong>Nicolaudie Group (LightingSoft AG)</strong> in Meroux, France, where I&apos;ve been building
+            Nicolaudie Group (LightingSoft AG) in Meroux, France, where I've been building
             scalable Modbus TCP/RS485 servers and strengthening CI/CD pipelines for production firmware.
           </p>
         </div>
-        <ul class="skill-groups reveal">
+        <ul class="skill-groups">
           <li>
             <h3>Microcontrollers</h3>
             <p>STM32 · ESP32 · PIC · ATmega328P · Raspberry Pi · NXP LPC</p>
@@ -105,29 +110,30 @@
       </div>
     </section>
 
-    <!-- EXPERIENCE -->
-    <section class="section experience" id="experience">
-      <div class="section-head">
-        <span class="eyebrow reveal">Experience</span>
-        <h2 class="section-title reveal">Where I&apos;ve built<span class="dot">.</span></h2>
-        <p class="section-lead reveal">Building, mentoring and shipping embedded systems.</p>
-      </div>
+    <!-- ===== EXPERIENCE ===== -->
+    <section class="section reveal" id="experience" aria-labelledby="exp-heading">
+      <span class="eyebrow" data-i18n="exp.eyebrow">Experience</span>
+      <h2 class="section-title" id="exp-heading" data-i18n="exp.title">Where I've built.</h2>
+      <p class="section-lead" data-i18n="exp.lead">Building, mentoring and shipping embedded systems.</p>
 
-      <ol class="timeline">
+      <ul class="timeline">
+
         <li class="timeline-item reveal">
           <div class="timeline-meta">
             <span class="timeline-date">Mar 2026 — Present</span>
             <span class="timeline-org">Nicolaudie Group · LightingSoft AG · Meroux, France</span>
           </div>
-          <h3 class="timeline-role">Embedded Systems Engineering Intern</h3>
+          <h3 class="timeline-role" data-i18n="exp.role1">Embedded Systems Engineering Intern</h3>
           <ul class="timeline-points">
-            <li>Developed a scalable Modbus TCP/RS485 server for STM32 and NXP LPC supporting multiple concurrent clients.</li>
-            <li>Integrated Modbus triggers into the show engine for real-time scene control.</li>
-            <li>Built a robust C++ Modbus client with stress tests and authored QTest suites.</li>
-            <li>Migrated Jenkins CI/CD pipelines from Qt5 to Qt6.</li>
+            <li data-i18n="exp.r1b1">Developed a scalable Modbus TCP/RS485 server for STM32 and NXP LPC supporting multiple concurrent clients.</li>
+            <li data-i18n="exp.r1b2">Integrated Modbus triggers into the show engine for real-time scene control.</li>
+            <li data-i18n="exp.r1b3">Built a robust C++ Modbus client with stress tests and authored QTest suites.</li>
+            <li data-i18n="exp.r1b4">Migrated Jenkins CI/CD pipelines from Qt5 to Qt6.</li>
           </ul>
           <div class="tag-row">
-            <span class="tag">C / C++</span><span class="tag">Qt</span><span class="tag">QTest</span><span class="tag">STM32</span><span class="tag">NXP LPC</span><span class="tag">Modbus TCP/RS485</span><span class="tag">Jenkins</span>
+            <span class="tag">C / C++</span><span class="tag">Qt</span><span class="tag">QTest</span>
+            <span class="tag">STM32</span><span class="tag">NXP LPC</span><span class="tag">Modbus TCP/RS485</span>
+            <span class="tag">Jenkins</span>
           </div>
         </li>
 
@@ -136,15 +142,17 @@
             <span class="timeline-date">Jun 2024 — Sep 2025</span>
             <span class="timeline-org">Mare Custos · Tunis, Tunisia</span>
           </div>
-          <h3 class="timeline-role">Embedded Systems Engineer</h3>
+          <h3 class="timeline-role" data-i18n="exp.role2">Embedded Systems Engineer</h3>
           <ul class="timeline-points">
-            <li>Built a dual-slot OTA firmware update system over Ethernet/USB with automatic fallback recovery.</li>
-            <li>Prototyped reusable drivers for Timers, Ethernet, Flash, ADC and PCNT.</li>
-            <li>Designed custom micro-ROS transports for STM32 and a robust bootloader with reset-cause handling.</li>
-            <li>Automated build/test workflows with GitHub Actions.</li>
+            <li data-i18n="exp.r2b1">Built a dual-slot OTA firmware update system over Ethernet/USB with automatic fallback recovery.</li>
+            <li data-i18n="exp.r2b2">Prototyped reusable drivers for Timers, Ethernet, Flash, ADC and PCNT.</li>
+            <li data-i18n="exp.r2b3">Designed custom micro-ROS transports for STM32 and a robust bootloader with reset-cause handling.</li>
+            <li data-i18n="exp.r2b4">Automated build/test workflows with GitHub Actions.</li>
           </ul>
           <div class="tag-row">
-            <span class="tag">OTA</span><span class="tag">STM32</span><span class="tag">ESP32</span><span class="tag">micro-ROS</span><span class="tag">Unity C</span><span class="tag">GitHub Actions</span>
+            <span class="tag">OTA</span><span class="tag">STM32</span><span class="tag">ESP32</span>
+            <span class="tag">micro-ROS</span><span class="tag">Unity</span><span class="tag">C</span>
+            <span class="tag">GitHub Actions</span>
           </div>
         </li>
 
@@ -153,14 +161,15 @@
             <span class="timeline-date">May 2024 — Jul 2024</span>
             <span class="timeline-org">Orange Tunisie · Tunis, Tunisia</span>
           </div>
-          <h3 class="timeline-role">Mechatronics Engineer</h3>
+          <h3 class="timeline-role" data-i18n="exp.role3">Mechatronics Engineer</h3>
           <ul class="timeline-points">
-            <li>Optimized FreeRTOS task scheduling on ESP32 for reliable multitasking and efficient resource use.</li>
-            <li>Restructured the UART/Ymodem interface for reliable command reception.</li>
-            <li>Established a robust test bench to streamline robot functionality validation.</li>
+            <li data-i18n="exp.r3b1">Optimized FreeRTOS task scheduling on ESP32 for reliable multitasking and efficient resource use.</li>
+            <li data-i18n="exp.r3b2">Restructured the UART/Ymodem interface for reliable command reception.</li>
+            <li data-i18n="exp.r3b3">Established a robust test bench to streamline robot functionality validation.</li>
           </ul>
           <div class="tag-row">
-            <span class="tag">ESP32</span><span class="tag">FreeRTOS</span><span class="tag">UART</span><span class="tag">Ymodem</span><span class="tag">Bash</span>
+            <span class="tag">ESP32</span><span class="tag">FreeRTOS</span>
+            <span class="tag">UART</span><span class="tag">Ymodem</span><span class="tag">Bash</span>
           </div>
         </li>
 
@@ -169,181 +178,179 @@
             <span class="timeline-date">May 2023 — May 2025</span>
             <span class="timeline-org">Discovery Club Junior · Manouba, Tunisia</span>
           </div>
-          <h3 class="timeline-role">Robotics Instructor</h3>
+          <h3 class="timeline-role" data-i18n="exp.role4">Robotics Instructor</h3>
           <ul class="timeline-points">
-            <li>Delivered hands-on PCB design training with KiCad from schematic to prototype.</li>
-            <li>Guided students through digital logic design and ATmega328P register-level programming.</li>
-            <li>Mentored mechanical design and robot mechanics using SolidWorks.</li>
+            <li data-i18n="exp.r4b1">Delivered hands-on PCB design training with KiCad from schematic to prototype.</li>
+            <li data-i18n="exp.r4b2">Guided students through digital logic design and ATmega328P register-level programming.</li>
+            <li data-i18n="exp.r4b3">Mentored mechanical design and robot mechanics using SolidWorks.</li>
           </ul>
           <div class="tag-row">
-            <span class="tag">KiCad</span><span class="tag">SolidWorks</span><span class="tag">ATmega328P</span><span class="tag">Robotics</span>
+            <span class="tag">KiCad</span><span class="tag">SolidWorks</span>
+            <span class="tag">ATmega328P</span><span class="tag">Robotics</span>
           </div>
         </li>
-      </ol>
-    </section>
 
-    <!-- WORK / PROJECTS -->
-    <section class="section work" id="work">
-      <div class="section-head">
-        <span class="eyebrow reveal">Selected work</span>
-        <h2 class="section-title reveal">Projects<span class="dot">.</span></h2>
-        <p class="section-lead reveal">
-          Hover a card to reveal the illustration, then click to flip it and see the real photo.
-        </p>
-      </div>
-
-      <ul class="project-list" id="projectList">
-        <!-- Cards injected by script.js -->
       </ul>
     </section>
 
-    <!-- ACHIEVEMENTS -->
-    <section class="section achievements" id="achievements">
-      <div class="section-head">
-        <span class="eyebrow reveal">Achievements</span>
-        <h2 class="section-title reveal">Highlights<span class="dot">.</span></h2>
-        <p class="section-lead reveal">
-          Competitions, forums and recognitions along the way. 
-        </p>
-      </div>
+    <!-- ===== PROJECTS ===== -->
+    <section class="section" id="projects" aria-labelledby="proj-heading">
+      <span class="eyebrow" data-i18n="proj.eyebrow">Selected work</span>
+      <h2 class="section-title" id="proj-heading" data-i18n="proj.title">Projects.</h2>
+      <p class="section-lead" data-i18n="proj.lead">
+        Hover a card to reveal the illustration, then click to flip it and see the real photo.
+      </p>
+      <ul class="project-list" id="projectList"></ul>
+    </section>
+
+    <!-- ===== ACHIEVEMENTS ===== -->
+    <section class="section reveal" id="achievements" aria-labelledby="ach-heading">
+      <span class="eyebrow" data-i18n="ach.eyebrow">Achievements</span>
+      <h2 class="section-title" id="ach-heading" data-i18n="ach.title">Highlights.</h2>
+      <p class="section-lead" data-i18n="ach.lead">Competitions, forums and recognitions along the way.</p>
 
       <ul class="achievement-list">
-        <li class="achievement-card reveal" data-cursor="view">
+
+        <li class="achievement-card reveal">
           <div class="achievement-photo">
-            <img src="/public/achievements/robocup-korea.jpg" alt="RoboCup Asia Pacific 2024"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-            <div class="photo-fallback" style="display:none;">Add photo<br>public/achievements/robocup-korea.jpg</div>
+            <img src="public/achievements/robocup-korea.jpg" alt="RoboCup Asia Pacific 2024" loading="lazy" />
           </div>
           <div class="achievement-body">
             <span class="achievement-date">Nov 2024</span>
-            <h3>Mentor at RoboCup Asia Pacific 2024</h3>
-            <p>Mentored a student team at RoboCup Asia Pacific 2024 in South Korea, with Discovery Club Junior.</p>
+            <h3 data-i18n="ach.a1title">Mentor at RoboCup Asia Pacific 2024</h3>
+            <p data-i18n="ach.a1desc">Mentored a student team at RoboCup Asia Pacific 2024 in South Korea, with Discovery Club Junior.</p>
           </div>
         </li>
 
-        <li class="achievement-card reveal" data-cursor="view">
+        <li class="achievement-card reveal">
           <div class="achievement-photo">
-            <img src="/public/achievements/china-forum.jpg" alt="Chinese-Arab Youth Development Forum"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-            <div class="photo-fallback" style="display:none;">Add photo<br>public/achievements/china-forum.jpg</div>
+            <img src="public/achievements/china-forum.jpg" alt="Chinese-Arab Youth Development Forum" loading="lazy" />
           </div>
           <div class="achievement-body">
             <span class="achievement-date">2024</span>
-            <h3>Chinese-Arab Youth Development Forum</h3>
-            <p>Attended the Chinese-Arab Youth Development Forum in China, with Ministry of Sports and Youth.</p>
+            <h3 data-i18n="ach.a2title">Chinese-Arab Youth Development Forum</h3>
+            <p data-i18n="ach.a2desc">Attended the Chinese-Arab Youth Development Forum in China, with Ministry of Sports and Youth.</p>
           </div>
         </li>
 
-        <li class="achievement-card reveal" data-cursor="view">
+        <li class="achievement-card reveal">
           <div class="achievement-photo">
-            <img src="/public/achievements/eurobot.jpg" alt="Eurobot National Qualification"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-            <div class="photo-fallback" style="display:none;">Add photo<br>public/achievements/eurobot.jpg</div>
+            <img src="public/achievements/eurobot.jpg" alt="Eurobot National Qualification" loading="lazy" />
           </div>
           <div class="achievement-body">
             <span class="achievement-date">Apr 2023</span>
-            <h3>1st Prize — Eurobot National Qualification</h3>
-            <p>Won first prize at the Eurobot National Qualification, with INSAT.</p>
+            <h3 data-i18n="ach.a3title">1st Prize — Eurobot National Qualification</h3>
+            <p data-i18n="ach.a3desc">Won first prize at the Eurobot National Qualification, with INSAT.</p>
           </div>
         </li>
 
-        <li class="achievement-card reveal" data-cursor="view">
+        <li class="achievement-card reveal">
           <div class="achievement-photo">
-            <img src="/public/achievements/robocup-ensi.jpg" alt="ROBOCUP ENSI 5.0"
-                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-            <div class="photo-fallback" style="display:none;">Add photo<br>public/achievements/robocup-ensi.jpg</div>
+            <img src="public/achievements/robocup-ensi.jpg" alt="ROBOCUP ENSI 5.0" loading="lazy" />
           </div>
           <div class="achievement-body">
             <span class="achievement-date">Oct 2022</span>
-            <h3>1st Prize — Autonomous Robot Competition, ROBOCUP ENSI 5.0</h3>
-            <p>Took first place in the autonomous robot competition at ROBOCUP ENSI 5.0, with INSAT.</p>
+            <h3 data-i18n="ach.a4title">1st Prize — Autonomous Robot Competition, ROBOCUP ENSI 5.0</h3>
+            <p data-i18n="ach.a4desc">Took first place in the autonomous robot competition at ROBOCUP ENSI 5.0, with INSAT.</p>
           </div>
         </li>
+
       </ul>
     </section>
 
-    <!-- CERTIFICATES -->
-    <section class="section certificates" id="certificates">
-      <div class="section-head">
-        <span class="eyebrow reveal">Certificates</span>
-        <h2 class="section-title reveal">Credentials<span class="dot">.</span></h2>
-      </div>
+    <!-- ===== CERTIFICATES ===== -->
+    <section class="section reveal" id="certificates" aria-labelledby="cert-heading">
+      <span class="eyebrow" data-i18n="cert.eyebrow">Certificates</span>
+      <h2 class="section-title" id="cert-heading" data-i18n="cert.title">Credentials.</h2>
 
       <ul class="certificate-list">
         <li class="certificate-card reveal">
-          <h3>Altium Designer Pro — From Design to Manufacturing</h3>
-          <p class="certificate-meta">Instructor: Thameur Chebbi · 21 hours · Online · Oct 12 – Nov 9, 2024</p>
-          <p>Advanced PCB design across 2- and 4-layer boards, symbol/footprint development per
-          IPC standards, high-speed and mixed-signal design, SPI/I2C/UART/USB implementation,
-          LTspice simulation and full PCB documentation.</p>
+          <h3 data-i18n="cert.c1title">Altium Designer Pro — From Design to Manufacturing</h3>
+          <p class="certificate-meta" data-i18n="cert.c1meta">Instructor: Thameur Chebbi · 21 hours · Online · Oct 12 – Nov 9, 2024</p>
+          <p data-i18n="cert.c1desc">
+            Advanced PCB design across 2- and 4-layer boards, symbol/footprint development per
+            IPC standards, high-speed and mixed-signal design, SPI/I2C/UART/USB implementation,
+            LTspice simulation and full PCB documentation.
+          </p>
           <div class="tag-row">
-            <span class="tag">Altium</span><span class="tag">PCB Design</span><span class="tag">IPC Standards</span><span class="tag">LTspice</span>
+            <span class="tag">Altium</span><span class="tag">PCB Design</span>
+            <span class="tag">IPC Standards</span><span class="tag">LTspice</span>
           </div>
         </li>
       </ul>
     </section>
 
-    <!-- CONTACT -->
-    <section class="section contact" id="contact">
-      <span class="eyebrow reveal">Let&apos;s talk</span>
-      <h2 class="contact-title reveal">Let&apos;s build something<span class="dot">.</span></h2>
-      <p class="contact-lead reveal">
-        I&apos;m always interested in new opportunities and exciting embedded projects.
-        Let&apos;s connect and talk about what we can build together.
+    <!-- ===== CONTACT ===== -->
+    <section class="section contact reveal" id="contact" aria-labelledby="contact-heading">
+      <span class="eyebrow" data-i18n="contact.eyebrow">Let's talk</span>
+      <h2 class="contact-title" id="contact-heading" data-i18n="contact.title">Let's build something.</h2>
+      <p class="contact-lead" data-i18n="contact.lead">
+        I'm always interested in new opportunities and exciting embedded projects.
+        Let's connect and talk about what we can build together.
       </p>
-      <ul class="contact-social reveal">
+
+      <ul class="contact-social">
         <li>
-          <a href="mailto:darouez.oussama@gmail.com" class="social-btn" data-cursor="view" data-copy="darouez.oussama@gmail.com" data-copy-label="Email copied!" aria-label="Email darouez.oussama@gmail.com — click to copy">
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+          <a href="mailto:darouez.oussama@gmail.com" class="social-btn"
+             data-copy="darouez.oussama@gmail.com" data-copy-label="Copied!" aria-label="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect width="20" height="16" x="2" y="4" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
             </svg>
-            <span class="social-label">Email</span>
+            <span class="social-label" data-i18n="contact.emailLabel">Email</span>
           </a>
         </li>
         <li>
-          <a href="tel:+33616175057" class="social-btn" data-cursor="view" data-copy="+33 06 16 17 50 57" data-copy-label="Number copied!" aria-label="Phone +33 06 16 17 50 57 — click to copy">
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/>
+          <a href="tel:+33744767418" class="social-btn"
+             data-copy="+33744767418" data-copy-label="Copied!" aria-label="Phone">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.59 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
             </svg>
-            <span class="social-label">Phone</span>
+            <span class="social-label" data-i18n="contact.phoneLabel">Phone</span>
           </a>
         </li>
         <li>
-          <a href="https://maps.google.com/?q=Belfort,France" target="_blank" rel="noopener" class="social-btn" data-cursor="view" aria-label="Location: Belfort, France">
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>
+          <a href="#" class="social-btn" aria-label="Location">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+              <circle cx="12" cy="10" r="3"/>
             </svg>
-            <span class="social-label">Belfort, FR</span>
+            <span class="social-label" data-i18n="contact.locationLabel">Belfort, FR</span>
           </a>
         </li>
         <li>
-          <a href="https://github.com/Darouez-Oussama" target="_blank" rel="noopener" class="social-btn" data-cursor="view" aria-label="GitHub: Darouez-Oussama">
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
-              <path d="M12 .5A11.5 11.5 0 0 0 .5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.79 2.73 1.27 3.4.97.1-.76.4-1.27.73-1.56-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.84 1.19 3.1 0 4.43-2.7 5.4-5.28 5.69.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12 11.5 11.5 0 0 0 12 .5Z"/>
+          <a href="https://github.com/Darouez-Oussama" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.2c3 0 6-2 6-5.5a4.5 4.5 0 0 0-1.5-3.5c.5-1 .5-2-.5-3.5 0 0-1-.5-3 1.5a12.3 12.3 0 0 0-5 0C7.5 2 6.5 2.5 6.5 2.5c-1 1.5-1 2.5-.5 3.5A4.5 4.5 0 0 0 4.5 9.5c0 3.5 3 5.5 6 5.5a4 4 0 0 0-1 2v2"/>
+              <path d="M9 18c-4.51 2-5-2-7-2"/>
             </svg>
             <span class="social-label">GitHub</span>
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/oussama-darouez-55849a270/" target="_blank" rel="noopener" class="social-btn" data-cursor="view" aria-label="LinkedIn: Oussama Darouez">
-            <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" aria-hidden="true">
-              <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.55V9h3.57v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/>
+          <a href="https://www.linkedin.com/in/oussama-darouez" class="social-btn" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect width="4" height="12" x="2" y="9"/>
+              <circle cx="4" cy="4" r="2"/>
             </svg>
             <span class="social-label">LinkedIn</span>
           </a>
         </li>
       </ul>
-      <div class="contact-links reveal">
-        <a href="/assets/oussama-darouez-cv.pdf" class="btn" download>Download CV</a>
+
+      <div class="contact-links">
+        <a href="assets/oussama-darouez-cv.pdf" class="btn" download data-i18n="contact.cv">Download CV</a>
       </div>
     </section>
+
   </main>
 
   <footer class="footer">
     <span>© <span id="year"></span> Oussama Darouez · Belfort, France</span>
-    <a href="#top" class="footer-top" data-cursor="view">Back to top ↑</a>
+    <a href="#" class="footer-top" data-i18n="footer.top">Back to top ↑</a>
   </footer>
 
-  <script src="/script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
